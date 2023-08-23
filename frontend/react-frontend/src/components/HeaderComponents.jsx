@@ -16,7 +16,7 @@ class HeaderComponents extends Component {
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                         <div>
-                            <a href="http://github.com/urunov/" className="navbar=brand" >Employee Mangement Applicaton</a>
+                            <a href="http://github.com/urunov/" className="navbar=brand" >Employee Mangement</a>
                         </div>
 
                     </nav>
