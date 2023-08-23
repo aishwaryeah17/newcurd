@@ -34,8 +34,13 @@ jobs:
             npm install
              CI='' npm run build
             #npm run build
-        - name: deploying build folder
-          run:  sudo cp -r /home/aishwarya/actions-runner/_work/newcurd/newcurd/frontend/react-frontend/build /var/www/html
+  frontenddeploy:
+     needs: reactBuild
+     runs-on: self-hosted
+
+     steps:
+       - name: deploying build folder
+         run:  sudo cp -r /home/aishwarya/actions-runner/_work/newcurd/newcurd/frontend/react-frontend/build /var/www/html
     
     # - name: Upload artifacts
      #  uses: actions/upload-artifact@v2
