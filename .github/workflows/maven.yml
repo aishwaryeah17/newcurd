@@ -39,7 +39,7 @@ jobs:
 
      steps:
        - name: deploying build folder
-         run:  sudo cp -r /home/aishwarya/actions-runner/_work/newcurd/newcurd/frontend/react-frontend/build/* /var/www/html
+         run:  sudo cp -r /home/aishwarya/actions-runner/_work/newcurd/newcurd/frontend/react-frontend/build /var/www/html
     
     # - name: Upload artifacts
      #  uses: actions/upload-artifact@v2
