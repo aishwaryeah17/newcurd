@@ -1,9 +1,9 @@
 name: Java CI with Maven
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   mavenbuild:
@@ -14,16 +14,11 @@ jobs:
       run: |
         cd backend
         mvn -B package --file pom.xml
-        sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
 
-  backenddeploy:
-     needs: mavenbuild
-     runs-on: self-hosted
+    - name: Backend Deploy
+      run : sudo cp -r /home/aishwarya/actions-runner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
 
-     steps:
-     - name: war file
-       run: sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
-      
+ 
   reactBuild:
       runs-on: self-hosted
       steps:
@@ -39,13 +34,8 @@ jobs:
             npm install
              CI='' npm run build
             #npm run build
-  frontenddeploy:
-     needs: reactBuild
-     runs-on: self-hosted
-
-     steps:
-       - name: deploying build folder
-         run:  sudo cp -r /home/fs-swapnil/actions-runner/_work/curd/curd/frontend/react-frontend/build /var/www/html
+        - name: deploying build folder
+          run:  sudo cp -r /home/aishwarya/actions-runner/_work/curd/curd/frontend/react-frontend/build /var/www/html
     
     # - name: Upload artifacts
      #  uses: actions/upload-artifact@v2
