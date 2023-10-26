@@ -38,7 +38,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
-jobs:
+#jobs:
   snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
