@@ -27,18 +27,8 @@ on:
 permissions:
   contents: read
 
-
-jobs:
-  security:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@master
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/maven@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
-#jobs:
+jobs:
   snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
