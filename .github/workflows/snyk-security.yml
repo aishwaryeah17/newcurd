@@ -95,7 +95,11 @@
 #           sarif_file: snyk-code.sarif
 
 name: Example workflow using Snyk
-on: push
+on:
+  push:
+    branches: ["master" ]
+  pull_request:
+    branches: ["master"]
 jobs:
   security:
     runs-on: ubuntu-latest
