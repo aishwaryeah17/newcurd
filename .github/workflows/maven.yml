@@ -15,7 +15,7 @@ jobs:
         mvn -B package --file pom.xml
 
     - name: Backend Deploy
-      run : sudo cp -r /home/aishwarya/actions-runner/_work/newcurd/newcurd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
+      run : sudo cp -r /home/aishwarya/newcurd-githubrunner/_work/newcurd/newcurd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
 
  
   reactBuild:
