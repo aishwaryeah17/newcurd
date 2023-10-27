@@ -41,8 +41,8 @@ jobs:
 
         # For Snyk Open Source you must first set up the development environment for your application's dependencies
         # For example for Node
-        #- uses: actions/setup-node@v3
-        #  with:
+        # uses: actions/setup-node@v3
+        # with:
         #    node-version: 16
 
         env:
@@ -52,7 +52,7 @@ jobs:
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
       - name: Snyk Code test
-        run: snyk code test
+        run: code test
 
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
       # - name: Snyk Open Source monitor
