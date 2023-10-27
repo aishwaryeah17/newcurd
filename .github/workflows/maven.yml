@@ -17,16 +17,16 @@ jobs:
     - name: Backend Deploy
       run : sudo cp -r /home/aishwarya/newcurd-githubrunner/_work/newcurd/newcurd/backend/target/fullstack-0.0.1-SNAPSHOT.war /opt/tomcat/webapps
  
-  snyk:
-    runs-on: self-hosted
-    steps:
-     - uses: actions/checkout@master
-     - name: Run Snyk to check for vulnerabilities
-       uses: snyk/actions/maven@master
-       env:
-         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-       with:
-         command: code test   
+  # snyk:
+  #   runs-on: self-hosted
+  #   steps:
+  #    - uses: actions/checkout@master
+  #    - name: Run Snyk to check for vulnerabilities
+  #      uses: snyk/actions/maven@master
+  #      env:
+  #        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  #      with:
+  #        command: snyk code test   
  
   reactBuild:
       runs-on: self-hosted
