@@ -2,7 +2,6 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-
 # A sample workflow which sets up Snyk to analyze the full Snyk platform (Snyk Open Source, Snyk Code,
 # Snyk Container and Snyk Infrastructure as Code)
 # The setup installs the Snyk CLI - for more details on the possible commands
