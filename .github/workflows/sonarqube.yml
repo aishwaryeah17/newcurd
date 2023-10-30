@@ -1,14 +1,13 @@
-name: Build
+name: Sonarqube
 on:
   push:
-    branches:
-      - main # the name of your main branch
+    branches: [ "master" ]
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches: [ "master" ]
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
+  sonarqube:
+    name: sonarqube
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
         with:
